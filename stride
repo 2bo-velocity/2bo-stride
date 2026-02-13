@@ -1,0 +1,49 @@
+#!/usr/bin/env php
+<?php
+
+use Stride\Core\Console\Command;
+
+require __DIR__ . '/vendor/autoload.php';
+
+// Bootstrap just enough
+$app = require __DIR__ . '/bootstrap/app.php';
+
+// Initialize Console
+$console = new Stride\Core\CLI\Console();
+
+// Register existing commands adapter
+// The new Console class uses a different registry than the previous manual glob logic.
+// We need to bridge the existing commands to the new Console.
+// Existing commands extend Stride\Core\Console\Command and have a run method.
+
+// Helper adapter for existing commands
+$existingCommands = glob(__DIR__ . '/commands/*.php');
+foreach ($existingCommands as $file) {
+    require_once $file;
+}
+
+$commandClasses = array_filter(
+    get_declared_classes(),
+    fn($c) => is_subclass_of($c, Stride\Core\Console\Command::class)
+);
+
+foreach ($commandClasses as $c) {
+    if ((new ReflectionClass($c))->isAbstract()) continue;
+    
+    // Determine command name
+    if (isset($c::$commandName)) {
+        $name = $c::$commandName;
+    } else {
+        $shortName = (new ReflectionClass($c))->getShortName();
+        $name = strtolower(str_replace('Command', '', $shortName));
+    }
+    
+    // Register adapter handler
+    $console->registerCommand($name, function($args) use ($c) {
+        $instance = new $c();
+        $instance->run($args);
+    });
+}
+
+// Run Console
+$console->run($argv);

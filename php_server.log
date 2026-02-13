@@ -1,0 +1,51 @@
+nohup: 入力を無視します
+[Thu Feb 12 21:04:27 2026] PHP 8.1.2-1ubuntu2.23 Development Server (http://localhost:8999) started
+[Thu Feb 12 21:06:28 2026] 127.0.0.1:49018 Accepted
+[Thu Feb 12 21:06:28 2026] PHP Fatal error:  Uncaught Error: Class "Stride\Core\Config\Env" not found in /home/yusuke/github_yusukezeromax/2bo-stride/bootstrap/app.php:12
+Stack trace:
+#0 /home/yusuke/github_yusukezeromax/2bo-stride/public/index.php(8): require()
+#1 {main}
+  thrown in /home/yusuke/github_yusukezeromax/2bo-stride/bootstrap/app.php on line 12
+[Thu Feb 12 21:06:28 2026] 127.0.0.1:49018 [500]: GET / - Uncaught Error: Class "Stride\Core\Config\Env" not found in /home/yusuke/github_yusukezeromax/2bo-stride/bootstrap/app.php:12
+Stack trace:
+#0 /home/yusuke/github_yusukezeromax/2bo-stride/public/index.php(8): require()
+#1 {main}
+  thrown in /home/yusuke/github_yusukezeromax/2bo-stride/bootstrap/app.php on line 12
+[Thu Feb 12 21:06:28 2026] 127.0.0.1:49018 Closing
+[Thu Feb 12 21:09:23 2026] 127.0.0.1:53986 Accepted
+[Thu Feb 12 21:09:23 2026] PHP Fatal error:  Uncaught Error: Class "Stride\Core\Config\Env" not found in /home/yusuke/github_yusukezeromax/2bo-stride/bootstrap/app.php:12
+Stack trace:
+#0 /home/yusuke/github_yusukezeromax/2bo-stride/public/index.php(8): require()
+#1 {main}
+  thrown in /home/yusuke/github_yusukezeromax/2bo-stride/bootstrap/app.php on line 12
+[Thu Feb 12 21:09:23 2026] 127.0.0.1:53986 [500]: GET / - Uncaught Error: Class "Stride\Core\Config\Env" not found in /home/yusuke/github_yusukezeromax/2bo-stride/bootstrap/app.php:12
+Stack trace:
+#0 /home/yusuke/github_yusukezeromax/2bo-stride/public/index.php(8): require()
+#1 {main}
+  thrown in /home/yusuke/github_yusukezeromax/2bo-stride/bootstrap/app.php on line 12
+[Thu Feb 12 21:09:23 2026] 127.0.0.1:53986 Closing
+[Thu Feb 12 21:11:44 2026] 127.0.0.1:48520 Accepted
+[Thu Feb 12 21:11:44 2026] PHP Fatal error:  Uncaught TypeError: h(): Argument #1 ($str) must be of type string, null given, called in /home/yusuke/github_yusukezeromax/2bo-stride/resources/views/pages/home.php on line 3 and defined in /home/yusuke/github_yusukezeromax/2bo-stride/system/src/Helpers.php:37
+Stack trace:
+#0 /home/yusuke/github_yusukezeromax/2bo-stride/resources/views/pages/home.php(3): h()
+#1 /home/yusuke/github_yusukezeromax/2bo-stride/system/src/Core/View/View.php(42): require('...')
+#2 /home/yusuke/github_yusukezeromax/2bo-stride/system/src/Core/View/View.php(19): Stride\Core\View\View->renderFile()
+#3 /home/yusuke/github_yusukezeromax/2bo-stride/system/src/Helpers.php(32): Stride\Core\View\View->render()
+#4 /home/yusuke/github_yusukezeromax/2bo-stride/app/Controllers/HomeController.php(13): view()
+#5 /home/yusuke/github_yusukezeromax/2bo-stride/public/index.php(30): App\Controllers\HomeController->index()
+#6 {main}
+  thrown in /home/yusuke/github_yusukezeromax/2bo-stride/system/src/Helpers.php on line 37
+[Thu Feb 12 21:11:44 2026] 127.0.0.1:48520 [500]: GET / - Uncaught TypeError: h(): Argument #1 ($str) must be of type string, null given, called in /home/yusuke/github_yusukezeromax/2bo-stride/resources/views/pages/home.php on line 3 and defined in /home/yusuke/github_yusukezeromax/2bo-stride/system/src/Helpers.php:37
+Stack trace:
+#0 /home/yusuke/github_yusukezeromax/2bo-stride/resources/views/pages/home.php(3): h()
+#1 /home/yusuke/github_yusukezeromax/2bo-stride/system/src/Core/View/View.php(42): require('...')
+#2 /home/yusuke/github_yusukezeromax/2bo-stride/system/src/Core/View/View.php(19): Stride\Core\View\View->renderFile()
+#3 /home/yusuke/github_yusukezeromax/2bo-stride/system/src/Helpers.php(32): Stride\Core\View\View->render()
+#4 /home/yusuke/github_yusukezeromax/2bo-stride/app/Controllers/HomeController.php(13): view()
+#5 /home/yusuke/github_yusukezeromax/2bo-stride/public/index.php(30): App\Controllers\HomeController->index()
+#6 {main}
+  thrown in /home/yusuke/github_yusukezeromax/2bo-stride/system/src/Helpers.php on line 37
+[Thu Feb 12 21:11:44 2026] 127.0.0.1:48520 Closing
+[Thu Feb 12 21:12:29 2026] 127.0.0.1:56144 Accepted
+[Thu Feb 12 21:12:29 2026] 127.0.0.1:56144 [200]: GET /
+[Thu Feb 12 21:12:29 2026] 127.0.0.1:56144 Closing
